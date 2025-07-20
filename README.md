@@ -1,4 +1,4 @@
-# Hyperliquid Funding History
+# Binance Funding History
 
 A browser-based tool for viewing historical funding rates on [Binance](https://www.binance.com). This lets you visualize and compare different moving averages across various timeframes for any listed token.
 
