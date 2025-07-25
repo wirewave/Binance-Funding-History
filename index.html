@@ -1042,10 +1042,12 @@ async function loadFundingData(range = '7d') {
     // Determine funding interval in hours (rounded to nearest hour)
     const intervalHours = Math.round(medianInterval / (60 * 60 * 1000));
 
-    // If viewMode is hourly, update the label dynamically
+    // update the label hourly dynamically
+    const hourlyLabel = `Hourly (${intervalHours}h)`;
+    document.querySelector('#viewModeDropdownList .dropdown-item:nth-child(1)').textContent = hourlyLabel;
+
     if (viewMode === 'hourly') {
-      document.getElementById('selectedViewModeLabel').innerText = `Hourly (${intervalHours}h)`;
-      document.querySelector('#viewModeDropdownList .dropdown-item:nth-child(1)').textContent = `Hourly (${intervalHours}h)`;
+      document.getElementById('selectedViewModeLabel').innerText = hourlyLabel;
     }
 
     // Apply funding rate conversion (raw % or annualized %)
